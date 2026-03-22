@@ -42,7 +42,7 @@ class Wallet {
     }
 }
 
-public class Main {
+public class Waller_System {
     public static void main(String[] args) throws Exception {
 
         Wallet w = new Wallet();
