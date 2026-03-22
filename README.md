@@ -52,17 +52,18 @@ All critical operations (credit, debit, getBalance) are protected using locks.
 
 ### 🧪 Example Scenario
 
+```
 createUser("u1", 100)
 
 Thread-1 → debit(50)
 Thread-2 → debit(70)
-
+```
 Only one transaction succeeds and the final balance remains consistent.
 
 ---
 
 ### 🏗️ Architecture
-
+```
 Client Threads
 ↓
 Wallet Service
@@ -70,25 +71,27 @@ Wallet Service
 ConcurrentHashMap<UserId, User>
 ↓
 User Object (balance + lock)
-
+```
 ---
 
 ### ⚡ How to Run
 
 Compile:
+```
 javac Main.java
-
-Run:
+```
+Run: 
+```
 java Main
-
+```
 ---
 
 ### 📊 Output Example
-
+```
 T1: success
 T2: failed
 Final Balance: 50
-
+```
 ---
 
 ### 🔥 Challenges Solved
